@@ -12,7 +12,9 @@
     <p> Trainee Name</p>
     <p> Trainee Age</p>
 </div>
-<div class ='content' *ngFor="let trainee of trainees | search:searchstring">
-    <p>{{trainee.name}}</p>
+<div class ='content' *ngFor="let trainee of trainees | search:searchstring | dataSort">
+    <p>{{trainee.name | reverseString}}</p>
     <p> {{trainee.age}}</p>
 </div>
+
+<!-- reverseString -->
